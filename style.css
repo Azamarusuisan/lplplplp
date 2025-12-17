@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* LP Container */
 .lp-container {
     width: 100%;
@@ -25,6 +29,13 @@ body {
     flex-direction: column;
 }
 
+.image-sequence a {
+    display: block;
+    line-height: 0;
+    cursor: pointer;
+    /* クリック可能であることを示す */
+}
+
 .image-sequence img {
     display: block;
     width: 100%;
@@ -33,6 +44,12 @@ body {
     padding: 0;
     vertical-align: bottom;
     /* 画像下の微小な隙間を削除 */
+    transition: filter 0.2s;
+}
+
+.image-sequence a:hover img {
+    filter: brightness(0.95);
+    /* ホバー時に少し暗くしてフィードバック */
 }
 
 /* Contact Section */
